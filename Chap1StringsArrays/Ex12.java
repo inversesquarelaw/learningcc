@@ -23,7 +23,7 @@ class Ex12{
             while( end < str.length ){
                 ++end;
             }
-            --end;
+            --end;      //need this line, otherwise, indext out of bounds except
 
             while(start < end){
                 tmp = str[start];

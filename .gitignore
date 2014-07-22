@@ -1,5 +1,5 @@
 *.class
 *.log
 *.txt
-practice.java
-test.java
+*practice.java
+*test.java
