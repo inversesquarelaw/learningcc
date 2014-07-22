@@ -60,13 +60,33 @@ Radix and bucket sorts thus are two useful generalizations of counting sort. The
 
 */
 
+import java.util.Arrays;  //needed for sort() and equals()
 
-public class Anagrams{
+public class Ex14{
 
-    private static void isAnagram(char[] s1, char[] s2){
+    private static boolean isAnagramSort(String s1, String s2){
+      //you have to convert String -> char[] in the function, otherwise it complains about void type. Don't really understand why.
+      char[] c1 = s1.toCharArray();
+      char[] c2 = s2.toCharArray();
+      Arrays.sort(c1);    //Arrays.sort sorts in-place
+      Arrays.sort(c2);
+      return Arrays.equals(c1, c2);   
+      //TODO: Doesn't return correct answer with sentence anagrams.
     }
 
     public static void main(String args[]){
+      String s1 = "earth";
+      String s2 = "heart";    //hater is also an anagram
+      System.out.printf("isAnagram: %s, %s: %s\n", s1, s2, isAnagramSort(s1,s2));
+
+      s1 = "verbose";
+      s2 = "observe";
+      System.out.printf("isAnagram: %s, %s: %s\n", s1, s2, isAnagramSort(s1,s2));
+
+      s1 = "say it with flowers";
+      s2 = "we flirt so this way";
+      System.out.printf("isAnagram: %s, %s: %s\n", s1, s2, isAnagramSort(s1,s2));
+
     }
 
 }
