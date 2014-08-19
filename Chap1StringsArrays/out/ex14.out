@@ -1,0 +1,8 @@
+isAnagramSort: Repeat, Repeatrepeat: false
+isAnagram:     Repeat, Repeatrepeat: false
+isAnagramSort: heart, earth: true
+isAnagram:     heart, earth: true
+isAnagramSort: Dog, God: true
+isAnagram:     Dog, God: true
+isAnagramSort: say it with flowers, we flirt so this way: true
+isAnagram:     say it with flowers, we flirt so this way: false
